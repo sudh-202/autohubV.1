@@ -1,0 +1,14 @@
+{
+    "menu": {
+      "home": "Home"
+    },
+    "submenu": {
+      "item1": "Sub Item 1",
+      "item2": "Sub Item 2"
+    },
+    "auth": {
+      "login_register": "Login / Register"
+    },
+    "favorites": "Favorites"
+  }
+  

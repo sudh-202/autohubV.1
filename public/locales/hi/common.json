@@ -1,0 +1,14 @@
+{
+    "menu": {
+      "home": "होम"
+    },
+    "submenu": {
+      "item1": "उप आइटम 1",
+      "item2": "उप आइटम 2"
+    },
+    "auth": {
+      "login_register": "लॉग इन / पंजीकरण"
+    },
+    "favorites": "पसंदीदा"
+  }
+      
