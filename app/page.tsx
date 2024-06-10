@@ -1,13 +1,18 @@
-import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
+import { CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 import CarCarousel from "@/components/CarCarousel";
-import Features from "@/components/Features";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
+import CarCard from '@/components/CarCard';
 
+interface SearchParams {
+  manufacturer?: string;
+  year?: number;
+  fuel?: string;
+  limit?: number;
+  model?: string;
+}
 
-import Image from "next/image";
-
-export default async function Home({ searchParams }) {
+export default async function Home({ searchParams }: { searchParams: SearchParams }) {
 
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
@@ -27,9 +32,9 @@ export default async function Home({ searchParams }) {
       {!isDataEmpty ? (
         <section>
           <div className="mt-12 padding-x padding-y max-width" id="discover">
-            <h1 className="home__text-container text-4xl font-extrabold">Newly Launched Cars</h1>
-            <main className=" gap-8 pt-14  ">
-                <CarCarousel />
+            <main className=" gap-8 ">
+              <h1 className="home__text-container text-4xl font-extrabold pl-8">Newly Launched Cars</h1>
+              <CarCarousel />
             </main>
           </div>
         </section>
