@@ -8,21 +8,21 @@ const CarCarousel: React.FC = () => {
 
   const scrollLeft = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: -300, behavior: 'smooth' });
+      carouselRef.current.scrollBy({ left: -carouselRef.current.clientWidth, behavior: 'smooth' });
     }
   };
 
   const scrollRight = () => {
     if (carouselRef.current) {
-      carouselRef.current.scrollBy({ left: 300, behavior: 'smooth' });
+      carouselRef.current.scrollBy({ left: carouselRef.current.clientWidth, behavior: 'smooth' });
     }
   };
 
   return (
     <div className="relative">
-      <div ref={carouselRef} className="flex space-x-4 overflow-x-auto p-4 scrollbar-hide w-full h-full">
+      <div ref={carouselRef} className="flex p-20 scrollbar-hide w-full h-full gap-8 justify-center overflow-hidden ">
         {newlyLaunchedCars.map((car, index) => (
-          <div key={index} className="flex-shrink-0 w-1/4">
+          <div key={index} className="flex-shrink-0 w-1/4 ">
             <CarCard car={car} />
           </div>
         ))}

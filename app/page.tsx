@@ -23,13 +23,27 @@ export default async function Home({ searchParams }) {
   return (
     <main className="overflow-hidden">
       <Hero />
-      <div className="flex justify-center flex-col p-12">
-        <h1 className="text-3xl font-bold text-black">Newly Launched Cars</h1>
 
-        <main className=" p-[46px]">
-          <CarCarousel />
-        </main>
-      </div>
+      {!isDataEmpty ? (
+        <section>
+          <div className="mt-12 padding-x padding-y max-width" id="discover">
+            <h1 className="home__text-container text-4xl font-extrabold">Newly Launched Cars</h1>
+            <main className=" gap-8 pt-14  ">
+                <CarCarousel />
+            </main>
+          </div>
+        </section>
+      ) : (
+        <div className="home__error-container">
+          <h2 className="text-black text-xl font-bold">
+            Oops!!, No Results Found
+          </h2>
+          <p>{allCars?.message}</p>
+        </div>
+      )}
+
+
+
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
