@@ -328,3 +328,31 @@ export const newlyLaunchedCars: CarProps[] = [
   },
   
 ];
+
+export const upcomingCars: CarProps[] = [
+  {
+      city_mpg: 18,
+      make: "Tesla",
+      model: "Model X",
+      year: 2024,
+      transmission: "a",
+      drive: "awd",
+      image: "/images/tesla-model-x.jpg",
+      price: "$120,000",
+  },
+  // Add more upcoming cars as needed
+];
+
+export const popularCars: CarProps[] = [
+  {
+      city_mpg: 20,
+      make: "Toyota",
+      model: "Camry",
+      year: 2022,
+      transmission: "a",
+      drive: "fwd",
+      image: "/images/toyota-camry.jpg",
+      price: "$25,000",
+  },
+  // Add more popular cars as needed
+];

@@ -29,25 +29,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
     <main className="overflow-hidden">
       <Hero />
 
-      {!isDataEmpty ? (
-        <section>
-          <div className="mt-12 padding-x padding-y max-width" id="discover">
-            <main className=" gap-8 ">
-              <h1 className="home__text-container text-4xl font-extrabold pl-8">Newly Launched Cars</h1>
-              <main className=" mt-[-30px]"><CarCarousel /></main>
-            </main>
-          </div>
-        </section>
-      ) : (
-        <div className="home__error-container">
-          <h2 className="text-black text-xl font-bold">
-            Oops!!, No Results Found
-          </h2>
-          <p>{allCars?.message}</p>
-        </div>
-      )}
-
-
+      {/* Car Catalogue*/}
 
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
@@ -74,6 +56,28 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
               pageNumber={(searchParams.limit || 10) / 10}
               isNext={(searchParams.limit || 10) > allCars?.length}
             />
+          </section>
+        ) : (
+          <div className="home__error-container">
+            <h2 className="text-black text-xl font-bold">
+              Oops!!, No Results Found
+            </h2>
+            <p>{allCars?.message}</p>
+          </div>
+        )}
+
+        {/* Featured Cars */}
+
+        {!isDataEmpty ? (
+          <section>
+            <div className="mt-12  max-width" id="discover">
+              <main className=" gap-8 ">
+                <h1 className="home__text-container text-4xl font-extrabold ">Newly Launched Cars</h1>
+                <main className="pt-8">
+                  <CarCarousel />
+                </main>
+              </main>
+            </div>
           </section>
         ) : (
           <div className="home__error-container">
