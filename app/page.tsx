@@ -34,7 +34,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
           <div className="mt-12 padding-x padding-y max-width" id="discover">
             <main className=" gap-8 ">
               <h1 className="home__text-container text-4xl font-extrabold pl-8">Newly Launched Cars</h1>
-              <CarCarousel />
+              <main className=" mt-[-30px]"><CarCarousel /></main>
             </main>
           </div>
         </section>
