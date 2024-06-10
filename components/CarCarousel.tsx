@@ -63,7 +63,7 @@ const CarCarousel: React.FC = () => {
                     {['Newly Launched Cars', 'Upcoming Cars', 'Popular Cars'].map(tab => (
                         <button
                             key={tab}
-                            className={`px-4 py-2 mx-2 ${activeTab === tab ? 'text-yellow-500 border-b-2 border-yellow-500' : 'text-gray-500'}`}
+                            className={`px-4 py-2 mx-2 ${activeTab === tab ? 'text-white bg-[#2B59FF] rounded-lg' : 'text-gray-500'}`}
                             onClick={() => setActiveTab(tab)}
                         >
                             {tab}

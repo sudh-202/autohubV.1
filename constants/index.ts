@@ -228,7 +228,6 @@ export interface CarProps {
   isPopular?: boolean;
 }
 
-
 export const cars: CarProps[] = [
   {
     city_mpg: 15,
