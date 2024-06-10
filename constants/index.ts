@@ -223,9 +223,13 @@ export interface CarProps {
   drive: string;
   image: string;
   price?: number | string;
+  isNewlyLaunched?: boolean;
+  isUpcoming?: boolean;
+  isPopular?: boolean;
 }
 
-export const newlyLaunchedCars: CarProps[] = [
+
+export const cars: CarProps[] = [
   {
     city_mpg: 15,
     make: "Mercedes",
@@ -235,6 +239,8 @@ export const newlyLaunchedCars: CarProps[] = [
     drive: "awd",
     image: "/images/mercedes-maybach-gls.jpg",
     price: "$100,000",
+    isNewlyLaunched: true,
+    isUpcoming: true,
   },
   {
     city_mpg: 13,
@@ -245,6 +251,9 @@ export const newlyLaunchedCars: CarProps[] = [
     drive: "awd",
     image: "/images/mercedes-amg-s63-e-performance.jpg",
     price: "$150,000",
+    isNewlyLaunched: true,
+    isUpcoming: true,
+    isPopular: true,
   },
   {
     city_mpg: 17,
@@ -255,6 +264,9 @@ export const newlyLaunchedCars: CarProps[] = [
     drive: "fwd",
     image: "/images/volkswagen-virtus-gt.jpg",
     price: "$20,000",
+    isNewlyLaunched: true,
+    isUpcoming: true,
+    isPopular: true,
   },
   {
     city_mpg: 16,
@@ -265,6 +277,8 @@ export const newlyLaunchedCars: CarProps[] = [
     drive: "fwd",
     image: "/images/hyundai-venue-n-line.jpg",
     price: "$25,000",
+    isNewlyLaunched: false,
+    isUpcoming: true,
   },
   {
     city_mpg: 14,
@@ -275,84 +289,47 @@ export const newlyLaunchedCars: CarProps[] = [
     drive: "rwd",
     image: "/images/bmw-m4.jpg",
     price: "$80,000",
+    isNewlyLaunched: true,
+    isUpcoming: true,
+    isPopular: true,
   },
   {
-    city_mpg: 15,
-    make: "Mercedes",
-    model: "Maybach GLS",
-    year: 2023,
+    city_mpg: 18,
+    make: "Tesla",
+    model: "Model X",
+    year: 2024,
     transmission: "a",
     drive: "awd",
-    image: "/images/mercedes-maybach-gls.jpg",
-    price: "$100,000",
+    image: "/images/tesla-model-x.jpg",
+    price: "$120,000",
+    isUpcoming: true,
+    isNewlyLaunched: true,
+    isPopular: true,
   },
   {
-    city_mpg: 13,
-    make: "Mercedes",
-    model: "AMG S 63 E Performance",
-    year: 2023,
+    city_mpg: 20,
+    make: "Toyota",
+    model: "Camry",
+    year: 2022,
     transmission: "a",
-    drive: "awd",
-    image: "/images/mercedes-amg-s63-e-performance.jpg",
-    price: "$150,000",
+    drive: "fwd",
+    image: "/images/toyota-camry.jpg",
+    price: "$25,000",
+    isPopular: true,
+    isNewlyLaunched: true,
+    isUpcoming: true,
   },
   {
-    city_mpg: 17,
-    make: "Volkswagen",
-    model: "Virtus GT",
+    city_mpg: 18,
+    make: "Tesla",
+    model: "Model 7",
     year: 2023,
     transmission: "m",
-    drive: "fwd",
-    image: "/images/volkswagen-virtus-gt.jpg",
-    price: "$20,000",
-  },
-  {
-    city_mpg: 16,
-    make: "Hyundai",
-    model: "Venue N Line",
-    year: 2023,
-    transmission: "a",
-    drive: "fwd",
-    image: "/images/hyundai-venue-n-line.jpg",
-    price: "$25,000",
-  },
-  {
-    city_mpg: 14,
-    make: "BMW",
-    model: "M4",
-    year: 2023,
-    transmission: "a",
     drive: "rwd",
-    image: "/images/bmw-m4.jpg",
-    price: "$80,000",
+    image: "/images/toyota-camry.jpg",
+    price: "$70,000",
+    isPopular: true,
+    isNewlyLaunched: false,
+    isUpcoming: true,
   },
-  
-];
-
-export const upcomingCars: CarProps[] = [
-  {
-      city_mpg: 18,
-      make: "Tesla",
-      model: "Model X",
-      year: 2024,
-      transmission: "a",
-      drive: "awd",
-      image: "/images/tesla-model-x.jpg",
-      price: "$120,000",
-  },
-  // Add more upcoming cars as needed
-];
-
-export const popularCars: CarProps[] = [
-  {
-      city_mpg: 20,
-      make: "Toyota",
-      model: "Camry",
-      year: 2022,
-      transmission: "a",
-      drive: "fwd",
-      image: "/images/toyota-camry.jpg",
-      price: "$25,000",
-  },
-  // Add more popular cars as needed
 ];

@@ -69,7 +69,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
         {/* Featured Cars */}
 
         {!isDataEmpty ? (
-          <section>
+          <section className="my-20">
             <div className="mt-12  max-width" id="discover">
               <main className=" gap-8 ">
                 <h1 className="home__text-container text-4xl font-extrabold ">Newly Launched Cars</h1>

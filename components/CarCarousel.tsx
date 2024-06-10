@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useState, useEffect } from 'react';
-import { newlyLaunchedCars, upcomingCars, popularCars } from '../constants';
+import { cars, CarProps } from '../constants';
 import CarCard from './CarCardV2';
 
 const CarCarousel: React.FC = () => {
@@ -43,14 +43,14 @@ const CarCarousel: React.FC = () => {
         }
     };
 
-    const getCars = () => {
-        switch (activeTab) {
+    const filterCars = (cars: CarProps[], category: string) => {
+        switch (category) {
             case 'Newly Launched Cars':
-                return newlyLaunchedCars;
+                return cars.filter(car => car.isNewlyLaunched);
             case 'Upcoming Cars':
-                return upcomingCars;
+                return cars.filter(car => car.isUpcoming);
             case 'Popular Cars':
-                return popularCars;
+                return cars.filter(car => car.isPopular);
             default:
                 return [];
         }
@@ -58,12 +58,12 @@ const CarCarousel: React.FC = () => {
 
     return (
         <div className="relative">
-            <div className="flex justify-between ">
+            <div className="flex justify-between mb-4">
                 <div className="flex">
                     {['Newly Launched Cars', 'Upcoming Cars', 'Popular Cars'].map(tab => (
                         <button
                             key={tab}
-                            className={`px-4 py-2 mx-2 ${activeTab === tab ? 'text-white bg-blue-600 border-b-2 rounded-lg' : 'text-gray-500'}`}
+                            className={`px-4 py-2 mx-2 ${activeTab === tab ? 'text-yellow-500 border-b-2 border-yellow-500' : 'text-gray-500'}`}
                             onClick={() => setActiveTab(tab)}
                         >
                             {tab}
@@ -89,8 +89,8 @@ const CarCarousel: React.FC = () => {
                     </button>
                 </div>
             </div>
-            <div ref={carouselRef} className="flex px-10 py-8 scrollbar-hide  gap-8 justify-around overflow-hidden " onScroll={updateArrowsState}>
-                {getCars().map((car, index) => (
+            <div ref={carouselRef} className="flex px-10 py-6 scrollbar-hide w-full h-full gap-8 justify-center overflow-hidden" onScroll={updateArrowsState}>
+                {filterCars(cars, activeTab).map((car, index) => (
                     <div key={index} ref={index === 0 ? cardRef : null} className="flex-shrink-0 w-1/4">
                         <CarCard car={car} />
                     </div>

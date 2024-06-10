@@ -1,4 +1,3 @@
-// components/CarCard.tsx
 "use client";
 
 import { useState } from "react";
@@ -18,7 +17,7 @@ const calculateCarRent = (city_mpg: number, year: number) => {
     return basePrice + ageFactor + mpgFactor;
 };
 
-const CarCard = ({ car }: CarCardProps) => {
+const CarCardV2 = ({ car }: CarCardProps) => {
     const { city_mpg, make, model, year, transmission, drive, image } = car;
 
     const [isOpen, setIsOpen] = useState(false);
@@ -79,4 +78,4 @@ const CarCard = ({ car }: CarCardProps) => {
     );
 };
 
-export default CarCard;
+export default CarCardV2;
