@@ -75,7 +75,7 @@ const CarCarousel: React.FC = () => {
     return (
         <div className="relative">
             <div className="flex justify-between mb-4">
-                <div className="flex">
+                <div className="flex lg:pl-3">
                     {['Latest', 'Upcoming', 'Popular'].map(tab => (
                         <button
                             key={tab}
@@ -86,7 +86,7 @@ const CarCarousel: React.FC = () => {
                         </button>
                     ))}
                 </div>
-                <div className="flex space-x-2">
+                <div className="flex space-x-2 lg:pr-1">
                     <button
                         onClick={scrollLeft}
                         className={`p-2 rounded-full text-2xl sm:text-4xl ${isAtStart ? 'text-gray-400' : 'text-black'}`}
