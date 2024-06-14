@@ -74,7 +74,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
           <section className="my-20">
             <div className="mt-12  max-width" id="discover">
               <main className=" gap-8 ">
-                <h1 className="home__text-container lg:text-4xl font-extrabold text-3xl lg:pl-4">Featured Cars</h1>
+                <h1 className="home__text-container text-4xl font-extrabold  lg:pl-4">Featured Cars</h1>
                 <main className="pt-8">
                   <TabCarCarousel />
                 </main>
@@ -96,7 +96,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
           <section className="my-20">
             <div className="mt-12  max-width" id="discover">
               <main className=" gap-8 ">
-                <h1 className="home__text-container lg:text-4xl font-extrabold text-3xl lg:pl-6">Recently added cars</h1>
+                <h1 className="home__text-container text-4xl font-extrabold  lg:pl-6">Recently added cars</h1>
                 <main className="lg:mt-[-60px] mt-[-40px]">
                   <CarCarousel />
                 </main>
@@ -116,7 +116,8 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
         <section className="my-20">
             <div className="mt-12  max-width" id="discover">
               <main className=" gap-8 ">
-                <h1 className="home__text-container lg:text-4xl font-extrabold text-3xl lg:pl-4 lg:pb-8">Recently added cars</h1>
+                <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-4">All Brands
+                </h1>
                 <main className="">
                   <AllBrands />
                 </main>

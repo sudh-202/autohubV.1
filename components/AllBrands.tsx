@@ -24,7 +24,7 @@ const AllBrands: React.FC = () => {
         ))}
       </div>
       <div className="flex justify-center mt-4">
-        <button onClick={toggleShowAll} className="px-4 py-2 text-blue-500">
+        <button onClick={toggleShowAll} className="px-4 py-3 text-white bg-[#2B59FF] rounded-3xl ">
           {showAll ? 'View Less Brands' : 'View More Brands'}
         </button>
       </div>
