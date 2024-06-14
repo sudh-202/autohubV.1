@@ -4,6 +4,7 @@ import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 import CarCard from '@/components/CarCard';
 import CarCarousel from "@/components/CarCarousel";
+import AllBrands from "@/components/AllBrands";
 
 interface SearchParams {
   manufacturer?: string;
@@ -110,6 +111,18 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
             <p>{allCars?.message}</p>
           </div>
         )}
+
+        {/* All Brands */}
+        <section className="my-20">
+            <div className="mt-12  max-width" id="discover">
+              <main className=" gap-8 ">
+                <h1 className="home__text-container lg:text-4xl font-extrabold text-3xl lg:pl-4 lg:pb-8">Recently added cars</h1>
+                <main className="">
+                  <AllBrands />
+                </main>
+              </main>
+            </div>
+          </section>
 
 
       </div>
