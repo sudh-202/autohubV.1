@@ -3,6 +3,7 @@ import TabCarCarousel from "@/components/TabCarCarousel";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 import CarCard from '@/components/CarCard';
+import CarCarousel from "@/components/CarCarousel";
 
 interface SearchParams {
   manufacturer?: string;
@@ -75,6 +76,28 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
                 <h1 className="home__text-container lg:text-4xl font-extrabold text-3xl">Featured Cars</h1>
                 <main className="pt-8">
                   <TabCarCarousel />
+                </main>
+              </main>
+            </div>
+          </section>
+        ) : (
+          <div className="home__error-container">
+            <h2 className="text-black text-xl font-bold">
+              Oops!!, No Results Found
+            </h2>
+            <p>{allCars?.message}</p>
+          </div>
+        )}
+
+        {/* New Cars */}
+
+        {!isDataEmpty ? (
+          <section className="my-20">
+            <div className="mt-12  max-width" id="discover">
+              <main className=" gap-8 ">
+                <h1 className="home__text-container lg:text-4xl font-extrabold text-3xl lg:pl-10">New Cars</h1>
+                <main className="lg:mt-[-60px] mt-[-40px]">
+                  <CarCarousel />
                 </main>
               </main>
             </div>
