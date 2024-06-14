@@ -1,5 +1,5 @@
 import { CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
-import CarCarousel from "@/components/CarCarousel";
+import TabCarCarousel from "@/components/TabCarCarousel";
 import { fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 import CarCard from '@/components/CarCard';
@@ -72,9 +72,9 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
           <section className="my-20">
             <div className="mt-12  max-width" id="discover">
               <main className=" gap-8 ">
-                <h1 className="home__text-container text-4xl font-extrabold ">Newly Launched Cars</h1>
+                <h1 className="home__text-container lg:text-4xl font-extrabold text-3xl">Featured Cars</h1>
                 <main className="pt-8">
-                  <CarCarousel />
+                  <TabCarCarousel />
                 </main>
               </main>
             </div>
