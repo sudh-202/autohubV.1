@@ -97,7 +97,7 @@ const CarCarousel: React.FC = () => {
             </div>
             <div
                 ref={carouselRef}
-                className="flex lg:px-2 py-4 md:px-10 md:py-6 scrollbar-hide w-full h-full gap-4 md:gap-8 justify-start overflow-x-auto"
+                className="flex lg:px-6 py-4 md:px-10 md:py-6 scrollbar-hide w-full h-full gap-4 md:gap-8 justify-start overflow-x-auto"
                 onScroll={updateArrowsState}
                 onMouseDown={handleDragStart}
                 onMouseUp={handleDragEnd}
