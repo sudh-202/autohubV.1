@@ -34,8 +34,8 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
 
       {/* Car Catalogue*/}
 
-      <div className="mt-12 padding-x padding-y max-width" id="discover">
-        <div className="home__text-container">
+      <div className=" padding-x padding-y max-width" id="discover">
+        {/* <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
           <p>Explore the cars you might like</p>
         </div>
@@ -45,9 +45,9 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
             <CustomFilter title="fuel" options={fuels} />
             <CustomFilter title="year" options={yearsOfProduction} />
           </div>
-        </div>
+        </div> */}
 
-        {!isDataEmpty ? (
+        {/* {!isDataEmpty ? (
           <section>
             <div className="home__cars-wrapper">
               {allCars?.map((car) => (
@@ -67,7 +67,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
             </h2>
             <p>{allCars?.message}</p>
           </div>
-        )}
+        )} */}
 
         {/* Featured Cars */}
 
@@ -133,7 +133,7 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
               <main className=" gap-8 ">
                 <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-9">Compare Cars
                 </h1>
-                <main className="lg:mt-[-60px] mt-[-40px]">
+                <main className="lg:mt-[-80px] mt-[-40px]">
                   <CompareCarousel />
                 </main>
               </main>
