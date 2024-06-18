@@ -15,7 +15,7 @@ const AllBrands: React.FC = () => {
 
   return (
     <div className="p-4">
-      <div className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 transition-all duration-300`}>
+      <div className={`grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 transition-all duration-300 px-1`}>
         {visibleBrands.map((brand, index) => (
           <Link href={brand.url} key={index} className="flex flex-col items-center p-4 border rounded-md hover:shadow-md transition-shadow">
             <img src={brand.logo} alt={brand.name} className="h-12 mb-2" width={100} height={100} />

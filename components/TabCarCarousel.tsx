@@ -79,7 +79,7 @@ const CarCarousel: React.FC = () => {
                     {['Latest', 'Upcoming', 'Popular'].map(tab => (
                         <button
                             key={tab}
-                            className={`px-2 py-1 mx-1 text-sm sm:px-4 sm:py-2 sm:mx-2 sm:text-base ${activeTab === tab ? 'text-white bg-[#2B59FF] rounded-lg' : 'text-gray-500'}`}
+                            className={`lg:px-8 lg:py-1 mx-1 text-sm px-4 py-2 sm:mx-2 sm:text-base ${activeTab === tab ? 'text-white bg-[#2B59FF] rounded-lg' : 'text-gray-500'}`}
                             onClick={() => setActiveTab(tab)}
                         >
                             {tab}
@@ -97,7 +97,7 @@ const CarCarousel: React.FC = () => {
                     </button>
                     <button
                         onClick={scrollRight}
-                        className={`p-2 rounded-full text-2xl sm:text-4xl ${isAtEnd ? 'text-gray-400' : 'text-black'}`}
+                        className={`p-2 rounded-full text-2xl sm:text-4xl lg:pr-7 ${isAtEnd ? 'text-gray-400' : 'text-black'}`}
                         aria-label="Scroll right"
                         disabled={isAtEnd}
                     >
@@ -114,7 +114,7 @@ const CarCarousel: React.FC = () => {
                 onMouseMove={handleDragMove}
             >
                 {filterCars(cars, activeTab).map((car, index) => (
-                    <div key={index} ref={index === 0 ? cardRef : null} className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[45vw] lg:w-[17.5vw]">
+                    <div key={index} ref={index === 0 ? cardRef : null} className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[45vw] lg:w-[19vw]">
                         <CarCard car={car} />
                     </div>
                 ))}

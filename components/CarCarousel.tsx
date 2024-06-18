@@ -87,7 +87,7 @@ const CarCarousel: React.FC = () => {
                     </button>
                     <button
                         onClick={scrollRight}
-                        className={`p-2 rounded-full text-2xl sm:text-4xl ${isAtEnd ? 'text-gray-400' : 'text-black'}`}
+                        className={`p-2 rounded-full text-2xl sm:text-4xl lg:pr-7 ${isAtEnd ? 'text-gray-400' : 'text-black'}`}
                         aria-label="Scroll right"
                         disabled={isAtEnd}
                     >
@@ -97,14 +97,14 @@ const CarCarousel: React.FC = () => {
             </div>
             <div
                 ref={carouselRef}
-                className="flex lg:px-6 py-4 md:px-10 md:py-6 scrollbar-hide w-full h-full gap-4 md:gap-8 justify-start overflow-x-auto"
+                className="flex lg:px-4 py-4 md:px-10 md:py-6 scrollbar-hide w-full h-full gap-4 md:gap-8 justify-start overflow-x-auto"
                 onScroll={updateArrowsState}
                 onMouseDown={handleDragStart}
                 onMouseUp={handleDragEnd}
                 onMouseMove={handleDragMove}
             >
                 {filterCars(cars, activeTab).map((car, index) => (
-                    <div key={index} ref={index === 0 ? cardRef : null} className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[45vw] lg:w-[17.5vw]">
+                    <div key={index} ref={index === 0 ? cardRef : null} className="flex-shrink-0 w-[90vw] sm:w-[70vw] md:w-[45vw] lg:w-[19vw]">
                         <CarCard car={car} />
                     </div>
                 ))}
