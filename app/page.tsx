@@ -5,6 +5,7 @@ import { fetchCars } from "@/utils";
 import CarCard from '@/components/CarCard';
 import CarCarousel from "@/components/CarCarousel";
 import AllBrands from "@/components/AllBrands";
+import CompareCarousel from "@/components/CompareCarousel";
 
 interface SearchParams {
   manufacturer?: string;
@@ -116,10 +117,24 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
         <section className="my-20">
             <div className="mt-12  max-width" id="discover">
               <main className=" gap-8 ">
-                <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-4">All Brands
+                <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-5">All Brands
                 </h1>
-                <main className="">
+                <main className="lg:mt-[-10px] mt-[-20px]">
                   <AllBrands />
+                </main>
+              </main>
+            </div>
+          </section>
+
+          {/* Compare Section */}
+
+          <section className="my-20">
+            <div className="mt-12  max-width" id="discover">
+              <main className=" gap-8 ">
+                <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-9">Compare Cars
+                </h1>
+                <main className="lg:mt-[-60px] mt-[-40px]">
+                  <CompareCarousel />
                 </main>
               </main>
             </div>

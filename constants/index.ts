@@ -333,6 +333,22 @@ export const cars: CarProps[] = [
   },
 ];
 
+//Compare
+export const comparisons = [
+  {
+    car1: cars[0], // Mahindra XUV 3XO
+    car2: cars[1], // Tata Nexon
+  },
+  {
+    car1: cars[2], // Toyota Urban Cruiser Taisor
+    car2: cars[3], // Maruti Fronx
+  },
+  {
+    car1: cars[4], // Maruti Fronx
+    car2: cars[5], // Maruti Brezza
+  },
+];
+
 //brands
 
 export interface BrandProps {
