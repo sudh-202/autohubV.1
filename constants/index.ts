@@ -229,18 +229,7 @@ export interface CarProps {
 }
 
 export const cars: CarProps[] = [
-  {
-    city_mpg: 15,
-    make: "Mercedes",
-    model: "Maybach GLS",
-    year: 2023,
-    transmission: "a",
-    drive: "awd",
-    image: "/images/mercedes-maybach-gls.jpg",
-    price: "100,000",
-    isNewlyLaunched: true,
-    isUpcoming: true,
-  },
+   
   {
     city_mpg: 13,
     make: "Mercedes",
@@ -254,18 +243,64 @@ export const cars: CarProps[] = [
     isUpcoming: true,
     isPopular: true,
   },
+ 
   {
-    city_mpg: 17,
-    make: "Volkswagen",
-    model: "Virtus GT",
+    city_mpg: 20,
+    make: "Honda",
+    model: "Accord",
     year: 2023,
-    transmission: "m",
+    transmission: "a",
     drive: "fwd",
-    image: "/images/volkswagen-virtus-gt.jpg",
-    price: "20,000",
-    isNewlyLaunched: true,
+    image: "/images/honda-accord.jpg",
+    price: "25,000",
     isUpcoming: true,
     isPopular: true,
+  },
+  {
+    city_mpg: 12,
+    make: "BMW",
+    model: "X7",
+    year: 2023,
+    transmission: "a",
+    drive: "awd",
+    image: "/images/bmw-x7.jpg",
+    price: "90,000",
+    isNewlyLaunched: true,
+    isUpcoming: true,
+  },
+  {
+    city_mpg: 14,
+    make: "Audi",
+    model: "Q8",
+    year: 2023,
+    transmission: "a",
+    drive: "awd",
+    image: "/images/audi-q8.jpg",
+    price: "95,000",
+    isNewlyLaunched: true,
+    isPopular: true,
+  },
+  {city_mpg: 15,
+  make: "Mercedes",
+  model: "Maybach GLS",
+  year: 2023,
+  transmission: "a",
+  drive: "awd",
+  image: "/images/mercedes-maybach-gls.jpg",
+  price: "100,000",
+  isNewlyLaunched: true,
+  isUpcoming: true,
+},
+  {
+    city_mpg: 16,
+    make: "Lexus",
+    model: "RX 450h",
+    year: 2023,
+    transmission: "a",
+    drive: "awd",
+    image: "/images/lexus-rx-450h.jpg",
+    price: "50,000",
+    isUpcoming: true,
   },
   {
     city_mpg: 16,
@@ -288,6 +323,19 @@ export const cars: CarProps[] = [
     drive: "rwd",
     image: "/images/bmw-m4.jpg",
     price: "80,000",
+    isNewlyLaunched: true,
+    isUpcoming: true,
+    isPopular: true,
+  },
+  {
+    city_mpg: 17,
+    make: "Volkswagen",
+    model: "Virtus GT",
+    year: 2023,
+    transmission: "m",
+    drive: "fwd",
+    image: "/images/volkswagen-virtus-gt.jpg",
+    price: "20,000",
     isNewlyLaunched: true,
     isUpcoming: true,
     isPopular: true,
@@ -394,4 +442,28 @@ export const brands: BrandProps[] = [
   // { name: 'Pravaig', logo: 'https://imgd.aeplcdn.com/0X0/n/cw/ec/49/brands/logos/pravaig.jpg?v=1647236052167&q=80', url: '/brands/pravaig' },
   // { name: 'Fisker', logo: 'https://imgd.aeplcdn.com/0X0/n/cw/ec/50/brands/logos/fisker1647236054982.jpg?v=1647236055238&q=80', url: '/brands/fisker' },
   // // Add more brands as needed
+];
+//FAQ's
+export interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+export const faqs: FaqItem[] = [
+  {
+    question: 'What are the benefits of electric cars?',
+    answer: 'Electric cars are environmentally friendly and have lower operating costs compared to traditional gasoline cars.',
+  },
+  {
+    question: 'How often should I service my car?',
+    answer: 'It is recommended to service your car every 6 months or every 5,000 kilometers, whichever comes first.',
+  },
+  {
+    question: 'What type of insurance do I need for my car?',
+    answer: 'You typically need liability insurance, which covers damages you cause to others, and may also consider comprehensive and collision coverage to protect your vehicle.',
+  },
+  {
+    question: 'How can I improve my car\'s fuel efficiency?',
+    answer: 'To improve fuel efficiency, maintain proper tire pressure, drive smoothly, reduce idling, and keep up with regular maintenance such as oil changes and air filter replacements.',
+  },
 ];

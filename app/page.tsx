@@ -1,11 +1,14 @@
 import { CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 import TabCarCarousel from "@/components/TabCarCarousel";
-import { fuels, yearsOfProduction } from "@/constants";
+import { faqs, fuels, yearsOfProduction } from "@/constants";
 import { fetchCars } from "@/utils";
 import CarCard from '@/components/CarCard';
 import CarCarousel from "@/components/CarCarousel";
 import AllBrands from "@/components/AllBrands";
 import CompareCarousel from "@/components/CompareCarousel";
+import Faqs from "@/components/Faqs";
+import CarComparisonCarousel from "@/components/CompareCarousel";
+import FaqSection from "@/components/Faqs";
 
 interface SearchParams {
   manufacturer?: string;
@@ -115,30 +118,47 @@ export default async function Home({ searchParams }: { searchParams: SearchParam
 
         {/* All Brands */}
         <section className="my-20">
-            <div className="mt-12  max-width" id="discover">
-              <main className=" gap-8 ">
-                <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-5">All Brands
-                </h1>
-                <main className="lg:mt-[-10px] mt-[-20px]">
-                  <AllBrands />
-                </main>
+          <div className="mt-12  max-width" id="discover">
+            <main className=" gap-8 ">
+              <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-5">All Brands
+              </h1>
+              <main className="lg:mt-[-10px] mt-[-20px]">
+                <AllBrands />
               </main>
-            </div>
-          </section>
+            </main>
+          </div>
+        </section>
 
-          {/* Compare Section */}
+        {/* Compare Section */}
 
-          <section className="my-20">
-            <div className="mt-12  max-width" id="discover">
-              <main className=" gap-8 ">
-                <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-9">Compare Cars
-                </h1>
-                <main className="lg:mt-[-80px] mt-[-40px]">
-                  <CompareCarousel />
-                </main>
+        <section className="my-20">
+          <div className="mt-12  max-width" id="discover">
+            <main className=" gap-8 ">
+              <h1 className="home__text-container lg:text-4xl font-extrabold text-4xl lg:pb-8 pb-6 pl-9">Compare Cars
+              </h1>
+              <div className="container mx-auto p-4 lg:mt-[-100px] mt-[-20px]">
+                <CarComparisonCarousel />
+              </div>
+            </main>
+          </div>
+        </section>
+
+
+
+
+
+
+        <section className="my-20">
+          <div className="mt-12  max-width" id="discover">
+            <main className=" gap-8 ">
+              <h1 className="flex lg:text-4xl font-extrabold text-4xl justify-center">Frequently Asked Questions
+              </h1>
+              <main className="">
+                <FaqSection faqs={faqs} />
               </main>
-            </div>
-          </section>
+            </main>
+          </div>
+        </section>
 
 
       </div>
