@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { thumbnailImages, CarProps } from '../constants/index';
+import CarCarousel from './relatedCarCarousel';
 
 interface CarDetailsProps {
   car: {
@@ -31,7 +32,7 @@ const CarDetailsSection: React.FC<CarDetailsProps> = ({ car }) => {
     <div className="container mx-auto p-4 mt-10">
       <div className="flex flex-col md:flex-row gap-4 mt-10 mb-20">
         {/* Car Image Section */}
-        <div className="w-full md:w-2/3 ">
+        <div className="w-full md:w-2/3">
           <div className="relative w-full h-96 rounded-md shadow">
             <Image src="/hero.png" alt={`${car.make} ${car.model}`} layout="fill" className="object-contain rounded-md" />
           </div>
@@ -49,10 +50,10 @@ const CarDetailsSection: React.FC<CarDetailsProps> = ({ car }) => {
           </div>
         </div>
         {/* Car Information Section */}
-        <div className="w-full md:w-1/3 bg-white p-8 rounded-md shadow flex flex-col justify-center ">
-          <h1 className="lg:text-5xl font-bold mb-5 ">{car.make} {car.model}</h1>
+        <div className="w-full md:w-1/3 bg-white p-8 rounded-md shadow flex flex-col justify-center">
+          <h1 className="lg:text-5xl font-bold mb-5">{car.make} {car.model}</h1>
           <p className="text-3xl font-semibold text-[#2b59ff] mb-5">₹ {car.price} Lakh</p>
-          <ul className="space-y-6 text-gray-700 ">
+          <ul className="space-y-6 text-gray-700">
             <li className='lg:text-2xl'><strong>Year:</strong> {car.year}</li>
             <li className='lg:text-2xl'><strong>Transmission:</strong> {car.transmission === 'a' ? 'Automatic' : 'Manual'}</li>
             <li className='lg:text-2xl'><strong>Drive:</strong> {car.drive.toUpperCase()}</li>
@@ -61,8 +62,8 @@ const CarDetailsSection: React.FC<CarDetailsProps> = ({ car }) => {
           <button className="mt-10 w-full py-2 bg-[#2b59ff] text-white rounded-md text-2xl">Book Free Test Drive</button>
         </div>
       </div>
-      
-        {/* Car Details Section */}
+
+      {/* Car Details Section */}
       <div className="bg-white p-4 rounded-md shadow mt-6">
         <h2 className="text-4xl font-bold mb-4">Know your car</h2>
         <div className="flex flex-wrap">
@@ -98,6 +99,12 @@ const CarDetailsSection: React.FC<CarDetailsProps> = ({ car }) => {
             </ul>
           </div>
         </div>
+      </div>
+
+      {/* Related Cars Carousel Section */}
+      <div className="mt-10">
+        <h2 className="text-4xl font-bold mb-4">Related Cars</h2>
+        <CarCarousel price={car.price} model={car.model} make={''} />
       </div>
     </div>
   );
