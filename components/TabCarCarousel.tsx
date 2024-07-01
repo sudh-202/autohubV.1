@@ -1,6 +1,6 @@
 'use client'
 import { useRef, useState, useEffect } from 'react';
-import { cars, CarProps } from '../constants';
+import { carData, CarProps } from '../constants';
 import CarCard from './CarCardV2';
 
 const CarCarousel: React.FC = () => {
@@ -11,6 +11,7 @@ const CarCarousel: React.FC = () => {
     const [isAtStart, setIsAtStart] = useState(true);
     const [isAtEnd, setIsAtEnd] = useState(false);
     const isDragging = useRef(false);
+    const cars = carData;
 
     useEffect(() => {
         if (cardRef.current) {

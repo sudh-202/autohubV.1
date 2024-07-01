@@ -215,185 +215,316 @@ export const cities = [
 
 // Features
 export interface CarProps {
-  city_mpg: number;
   make: string;
   model: string;
   year: number;
   transmission: string;
   drive: string;
+  city_mpg: number;
+  price: number;
   image: string;
-  price?: number | string;
-  isNewlyLaunched?: boolean;
-  isUpcoming?: boolean;
-  isPopular?: boolean;
+  isNewlyLaunched: boolean;
+  isUpcoming: boolean;
+  isPopular: boolean;
+  details: {
+    regYear: string;
+    regNumber: string;
+    engineCapacity: string;
+    insurance: string;
+    spareKey: string;
+    ownership: string;
+    fuelType: string;
+  };
 }
 
-export const cars: CarProps[] = [
-   
+export const carData: CarProps[] = [
   {
-    city_mpg: 13,
     make: "Mercedes",
-    model: "AMG S 63 E Performance",
+    model: "AMG-S-63-E",
     year: 2023,
     transmission: "a",
     drive: "awd",
+    city_mpg: 13,
+    price: 150000,
     image: "/images/mercedes-amg-s63-e-performance.jpg",
-    price: "150,000",
     isNewlyLaunched: true,
-    isUpcoming: true,
+    isUpcoming: false,
     isPopular: true,
+    details: {
+      regYear: "Jan 2023",
+      regNumber: "XYZ-123",
+      engineCapacity: "3982 cc",
+      insurance: "Comprehensive, Valid till Jan - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
- 
   {
-    city_mpg: 20,
     make: "Honda",
     model: "Accord",
     year: 2023,
     transmission: "a",
     drive: "fwd",
+    city_mpg: 20,
+    price: 25000,
     image: "/images/honda-accord.jpg",
-    price: "25,000",
-    isUpcoming: true,
+    isNewlyLaunched: true,
+    isUpcoming: false,
     isPopular: true,
+    details: {
+      regYear: "Feb 2023",
+      regNumber: "ABC-456",
+      engineCapacity: "1998 cc",
+      insurance: "Comprehensive, Valid till Feb - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
   {
-    city_mpg: 12,
     make: "BMW",
     model: "X7",
     year: 2023,
     transmission: "a",
     drive: "awd",
+    city_mpg: 12,
+    price: 90000,
     image: "/images/bmw-x7.jpg",
-    price: "90,000",
     isNewlyLaunched: true,
-    isUpcoming: true,
+    isUpcoming: false,
+    isPopular: true,
+    details: {
+      regYear: "Mar 2023",
+      regNumber: "DEF-789",
+      engineCapacity: "2998 cc",
+      insurance: "Comprehensive, Valid till Mar - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
   {
-    city_mpg: 14,
     make: "Audi",
     model: "Q8",
     year: 2023,
     transmission: "a",
     drive: "awd",
+    city_mpg: 14,
+    price: 95000,
     image: "/images/audi-q8.jpg",
-    price: "95,000",
     isNewlyLaunched: true,
+    isUpcoming: false,
     isPopular: true,
+    details: {
+      regYear: "Apr 2023",
+      regNumber: "GHI-012",
+      engineCapacity: "2995 cc",
+      insurance: "Comprehensive, Valid till Apr - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
-  {city_mpg: 15,
-  make: "Mercedes",
-  model: "Maybach GLS",
-  year: 2023,
-  transmission: "a",
-  drive: "awd",
-  image: "/images/mercedes-maybach-gls.jpg",
-  price: "100,000",
-  isNewlyLaunched: true,
-  isUpcoming: true,
-},
   {
-    city_mpg: 16,
-    make: "Lexus",
-    model: "RX 450h",
+    make: "Mercedes",
+    model: "Maybach-GLS",
     year: 2023,
     transmission: "a",
     drive: "awd",
-    image: "/images/lexus-rx-450h.jpg",
-    price: "50,000",
-    isUpcoming: true,
+    city_mpg: 15,
+    price: 100000,
+    image: "/images/mercedes-maybach-gls.jpg",
+    isNewlyLaunched: true,
+    isUpcoming: false,
+    isPopular: true,
+    details: {
+      regYear: "May 2023",
+      regNumber: "JKL-345",
+      engineCapacity: "3982 cc",
+      insurance: "Comprehensive, Valid till May - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
   {
+    make: "Lexus",
+    model: "RX-450h",
+    year: 2023,
+    transmission: "a",
+    drive: "awd",
     city_mpg: 16,
+    price: 50000,
+    image: "/images/lexus-rx-450h.jpg",
+    isNewlyLaunched: true,
+    isUpcoming: false,
+    isPopular: true,
+    details: {
+      regYear: "Jun 2023",
+      regNumber: "MNO-678",
+      engineCapacity: "3456 cc",
+      insurance: "Comprehensive, Valid till Jun - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Hybrid",
+    },
+  },
+  {
     make: "Hyundai",
-    model: "Venue N Line",
+    model: "Venue-n-Line",
     year: 2023,
     transmission: "a",
     drive: "fwd",
+    city_mpg: 16,
+    price: 25000,
     image: "/images/hyundai-venue-n-line.jpg",
-    price: "25,000",
-    isNewlyLaunched: false,
-    isUpcoming: true,
+    isNewlyLaunched: true,
+    isUpcoming: false,
+    isPopular: true,
+    details: {
+      regYear: "Jul 2023",
+      regNumber: "PQR-901",
+      engineCapacity: "998 cc",
+      insurance: "Comprehensive, Valid till Jul - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
   {
-    city_mpg: 14,
     make: "BMW",
     model: "M4",
     year: 2023,
     transmission: "a",
     drive: "rwd",
+    city_mpg: 14,
+    price: 80000,
     image: "/images/bmw-m4.jpg",
-    price: "80,000",
     isNewlyLaunched: true,
-    isUpcoming: true,
+    isUpcoming: false,
     isPopular: true,
+    details: {
+      regYear: "Aug 2023",
+      regNumber: "STU-234",
+      engineCapacity: "2993 cc",
+      insurance: "Comprehensive, Valid till Aug - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
   {
-    city_mpg: 17,
     make: "Volkswagen",
-    model: "Virtus GT",
+    model: "Virtus-GT",
     year: 2023,
     transmission: "m",
     drive: "fwd",
+    city_mpg: 17,
+    price: 20000,
     image: "/images/volkswagen-virtus-gt.jpg",
-    price: "20,000",
     isNewlyLaunched: true,
-    isUpcoming: true,
+    isUpcoming: false,
     isPopular: true,
+    details: {
+      regYear: "Sep 2023",
+      regNumber: "VWX-567",
+      engineCapacity: "1498 cc",
+      insurance: "Comprehensive, Valid till Sep - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
   {
-    city_mpg: 18,
     make: "Tesla",
-    model: "Model X",
+    model: "Model-X",
     year: 2024,
     transmission: "a",
     drive: "awd",
+    city_mpg: 18,
+    price: 120000,
     image: "/images/tesla-model-x.jpg",
-    price: "120,000",
-    isUpcoming: true,
     isNewlyLaunched: true,
+    isUpcoming: true,
     isPopular: true,
+    details: {
+      regYear: "Oct 2023",
+      regNumber: "YZA-890",
+      engineCapacity: "Electric",
+      insurance: "Comprehensive, Valid till Oct - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Electric",
+    },
   },
   {
-    city_mpg: 20,
     make: "Toyota",
     model: "Camry",
     year: 2022,
     transmission: "a",
     drive: "fwd",
+    city_mpg: 20,
+    price: 25000,
     image: "/images/toyota-camry.jpg",
-    price: "25,000",
+    isNewlyLaunched: false,
+    isUpcoming: false,
     isPopular: true,
-    isNewlyLaunched: true,
-    isUpcoming: true,
+    details: {
+      regYear: "Nov 2022",
+      regNumber: "BCD-321",
+      engineCapacity: "2494 cc",
+      insurance: "Comprehensive, Valid till Nov - 2025",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    },
   },
+
   {
-    city_mpg: 18,
     make: "Tesla",
-    model: "Model 7",
+    model: "Model-7",
     year: 2023,
     transmission: "m",
     drive: "rwd",
-    image: "/images/toyota-camry.jpg",
-    price: "70,000",
+    city_mpg: 18,
+    price: 70000,
+    image: "/images/tesla-model-7.jpg",
+    isNewlyLaunched: true,
+    isUpcoming: false,
     isPopular: true,
-    isNewlyLaunched: false,
-    isUpcoming: true,
+    details: {
+      regYear: "Dec 2023",
+      regNumber: "EFG-654",
+      engineCapacity: "Electric",
+      insurance: "Comprehensive, Valid till Dec - 2026",
+      spareKey: "Yes",
+      ownership: "1st owner",
+      fuelType: "Petrol",
+    }
   },
+]
+
+export const thumbnailImages = [
+  "/hero.png",
+  "/hero.png",
+  // Add more image paths as needed
 ];
+
 
 //Compare
 export const comparisons = [
   {
-    car1: cars[0], // Mahindra XUV 3XO
-    car2: cars[1], // Tata Nexon
+    car1: carData[0], // Mahindra XUV 3XO
+    car2: carData[1], // Tata Nexon
   },
   {
-    car1: cars[2], // Toyota Urban Cruiser Taisor
-    car2: cars[3], // Maruti Fronx
+    car1: carData[2], // Toyota Urban Cruiser Taisor
+    car2: carData[3], // Maruti Fronx
   },
   {
-    car1: cars[4], // Maruti Fronx
-    car2: cars[5], // Maruti Brezza
+    car1: carData[4], // Maruti Fronx
+    car2: carData[5], // Maruti Brezza
   },
 ];
 
